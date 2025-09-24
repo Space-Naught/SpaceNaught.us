@@ -1,61 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Space Naught Fan Curve Reports</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 2rem;
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
       color: #333;
     }
-    h1 {
-      color: #2A5CAA;
+    header {
+      background: #2A5CAA;
+      padding: 2rem 1rem;
       text-align: center;
+      color: white;
     }
-    ul {
-      max-width: 600px;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .container {
+      max-width: 800px;
       margin: 2rem auto;
-      padding: 0;
-      list-style: none;
+      padding: 0 1rem;
     }
-    li {
+    .reports-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .report-item a {
+      display: block;
       background: white;
-      margin-bottom: 0.5rem;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
-    }
-    a {
-      text-decoration: none;
       color: #2A5CAA;
       font-weight: bold;
+      text-decoration: none;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: all 0.2s ease-in-out;
+      text-align: center;
     }
-    a:hover {
-      text-decoration: underline;
+    .report-item a:hover {
+      background: #2A5CAA;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     footer {
-      text-align: center;
       margin-top: 3rem;
-      font-size: 0.9em;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.85rem;
       color: gray;
+      border-top: 1px solid #ddd;
+    }
+    footer span {
+      color: #2A5CAA;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>Space Naught Fan Curve Reports</h1>
-  <p style="text-align:center;">Choose a report date below:</p>
-  
-  <ul>
-    <li><a href="2025-09-24/all_fans_dashboard.html">2025-09-24 Report</a></li>
-    <li><a href="all_fans_dashboard.html">2025-09-25 Report</a></li>
-    <!-- Add new links here each time you push an archive folder -->
-  </ul>
-  
+  <header>
+    <h1>Space Naught Fan Curve Reports</h1>
+    <p>Interactive report archive</p>
+  </header>
+
+  <div class="container">
+    <div class="reports-list">
+      <!-- Update these with new reports each day -->
+      <div class="report-item">
+        <a href="2025-09-24/all_fans_dashboard.html">📈 Report – 2025‑09‑24</a>
+      </div>
+      <div class="report-item">
+        <a href="2025-09-25/all_fans_dashboard.html">📈 Report – 2025‑09‑25</a>
+      </div>
+      <!-- Add more as needed -->
+    </div>
+  </div>
+
   <footer>
-    © <span style="color:#2A5CAA;font-weight:bold;">Space</span> Naught
+    © <span>Space</span> Naught — All reports generated automatically
   </footer>
 </body>
 </html>
