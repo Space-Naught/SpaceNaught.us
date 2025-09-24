@@ -2,89 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Space Naught Fan Curve Reports</title>
+  <title>Space Naught Fan Curves</title>
   <style>
     body {
-      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
       background: #f4f6f9;
-      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       background: #2A5CAA;
-      padding: 2rem 1rem;
-      text-align: center;
-      color: white;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .reports-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .report-item a {
+    header img {
       display: block;
-      background: white;
-      color: #2A5CAA;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: all 0.2s ease-in-out;
-      text-align: center;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
     }
-    .report-item a:hover {
-      background: #2A5CAA;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
     }
     footer {
-      margin-top: 3rem;
-      padding: 1rem;
+      background: whitesmoke;
       text-align: center;
-      font-size: 0.85rem;
-      color: gray;
+      padding: 1.5rem 0;
       border-top: 1px solid #ddd;
     }
-    footer span {
-      color: #2A5CAA;
-      font-weight: bold;
+    footer img {
+      max-height: 60px;
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
+  <!-- Banner header -->
   <header>
-    <h1>Space Naught Fan Curve Reports</h1>
-    <p>Interactive report archive</p>
+    <img src="banner.png" alt="Space Naught Banner" />
   </header>
 
-  <div class="container">
-    <div class="reports-list">
-      <!-- Update these with new reports each day -->
-      <div class="report-item">
-        <a href="2025-09-24/all_fans_dashboard.html">📈 Report – 2025‑09‑24</a>
-      </div>
-      <div class="report-item">
-        <a href="2025-09-25/all_fans_dashboard.html">📈 Report – 2025‑09‑25</a>
-      </div>
-      <!-- Add more as needed -->
-    </div>
-  </div>
+  <!-- Main dashboard (your all_fans_dashboard.html will be at root)-->
+  <main>
+    <!-- For now, you can either put a link… -->
+    <a href="all_fans_dashboard.html" 
+       style="background:#2A5CAA;color:white;text-decoration:none;
+              padding:1rem 2rem;border-radius:8px;font-weight:bold;">
+       📊 Open Latest Fan Curve Dashboard
+    </a>
 
+    <!-- …or if you want to embed the dashboard directly inside index:
+    <iframe src="all_fans_dashboard.html" 
+            style="width:100%;height:80vh;border:none;"></iframe>
+    -->
+  </main>
+
+  <!-- Footer with your logo -->
   <footer>
-    © <span>Space</span> Naught — All reports generated automatically
+    <img src="logo.png" alt="Space Naught Logo" />
   </footer>
 </body>
 </html>
